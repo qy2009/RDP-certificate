@@ -4,6 +4,17 @@ These scripts obtain a publicly trusted Let's Encrypt certificate using a
 Cloudflare DNS challenge, package it as a PFX, and bind it to the Windows RDP
 listener.
 
+## Run directly on an Oracle VPS
+
+Replace the hostname and email address, then run:
+
+```sh
+bash <(curl -fsSL https://raw.githubusercontent.com/qy2009/RDP-certificate/main/01-issue-rdp-certificate.sh) win.rui-qiu.com you@example.com
+```
+
+The script prompts for the Cloudflare API token and PFX password. Neither
+secret is stored in this repository or included in the command line.
+
 ## Before starting
 
 1. Create a Cloudflare API token limited to the relevant zone. Give it:
