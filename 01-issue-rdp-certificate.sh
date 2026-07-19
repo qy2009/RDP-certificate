@@ -71,9 +71,9 @@ echo "Obtaining or renewing the certificate for $DOMAIN ..."
 docker run --rm \
   --user "$(id -u):$(id -g)" \
   -e CF_DNS_API_TOKEN \
-  -v "$LEGO_DIR:/lego" \
+  -v "$LEGO_DIR:/data" \
   goacme/lego:latest \
-  --path /lego \
+  --path /data \
   --email "$ACME_EMAIL" \
   --accept-tos \
   --key-type RSA2048 \
